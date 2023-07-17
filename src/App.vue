@@ -1,33 +1,26 @@
 <script>
 import axios from 'axios';
 
-// import HelloWorld from './components/HelloWorld.vue'
+import ProjectCard from './components/ProjectCard.vue'
 
 export default {
   name: "App",
   components: {
-
+    ProjectCard
   },
   data() {
     return {
-      ApiUrl: "http://localhost:8000/api/projects",
     }
   },
   methods: {
-    getProjects() {
-      axios.get(this.ApiUrl).then(result =>{
-        console.log(result.data)
-      })
-    }
   },
   mounted() {
-    this.getProjects()
   }
 }
 </script>
 
 <template>
-
+  <ProjectCard />
 </template>
 
 <style scoped>
