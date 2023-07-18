@@ -1,12 +1,12 @@
 <script>
-import axios from 'axios';
-
-import ProjectCard from './components/ProjectCard.vue'
+import AppHeader from "./components/AppHeader.vue"
+import AppFooter from './components/AppFooter.vue'
 
 export default {
   name: "App",
   components: {
-    ProjectCard
+    AppHeader,
+    AppFooter
   },
   data() {
     return {
@@ -20,7 +20,19 @@ export default {
 </script>
 
 <template>
-  <ProjectCard />
+
+  <header>
+    <AppHeader />
+  </header>
+
+  <main>
+    <router-view></router-view>
+  </main>
+
+  <footer>
+    <AppFooter />
+  </footer>
+
 </template>
 
 <style scoped>
