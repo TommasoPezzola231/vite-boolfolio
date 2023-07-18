@@ -77,15 +77,14 @@ import ProjectCard from "./ProjectCard.vue"
 
 <style scoped>
     .load{
-    width: 100vw;
-    max-width: 100%;
-    height: 97vh;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px)!important;
+    z-index: 100;
 }
 
 .load_icon{
