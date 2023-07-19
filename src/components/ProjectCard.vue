@@ -22,6 +22,7 @@ export default {
 <template>
     <div class="card">
         <h4>{{ project.title }}</h4>
+        <img class="w-50" :src=" 'http://localhost:8000/storage/' + project.image ">
         <h5>Tipo: <span class="badge text-bg-primary">{{ project.type.name ? project.type.name : 'Nessuno' }}</span></h5>
 
         <h6>Tecnologie:
