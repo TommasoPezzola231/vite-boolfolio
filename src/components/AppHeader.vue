@@ -3,7 +3,10 @@
         name: "AppHeader",
         data() {
             return {
-
+                navLinks: [
+                    { routeName: '/', label: 'Home'},
+                    { routeName: '/projects', label: 'Projects'}
+                ]
             }
         },
         methods: {
@@ -21,8 +24,9 @@
         <div class="container-fluid d-flex justify-content-between p-3">
 
             <span class="d-flex">
-                <a class="btn btn-secondary" href="/">Home</a>
-                <a class="btn btn-secondary ms-3" href="/projects">Projects</a>
+                <template v-for="item in navLinks">
+                    <router-link class="btn btn-secondary ms-3" :to="item.routeName">{{item.label}}</router-link>
+                </template>
             </span>
 
             <span class="d-flex">
