@@ -31,6 +31,8 @@ import ProjectCard from "./ProjectCard.vue"
                     this.currentPage = result.data.projects.current_page,
                     this.lastPage = result.data.projects.last_page
                     this.loading = false
+                }).catch(err => {
+                    this.$router.push( { name: "not-found" } )
                 })
             },
             nextPage(){
@@ -66,6 +68,7 @@ import ProjectCard from "./ProjectCard.vue"
     <h2>Progetti</h2>
     <h5>Pagina {{ currentPage }}/{{ lastPage }}</h5>
     <template v-for="project in projects">
+
         <ProjectCard :project="project" />
     </template>
 
