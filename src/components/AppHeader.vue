@@ -30,8 +30,7 @@
             </span>
 
             <span class="d-flex">
-                <input type="search">
-                <button class="btn btn-primary" type="submit">Cerca</button>
+                <router-link class="btn btn-info" to="/contact-us">Need Help?</router-link>
             </span>
 
         </div>

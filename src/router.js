@@ -4,6 +4,7 @@ import AppHome from './pages/AppHome.vue'
 import AppProjects from './pages/AppProjects.vue'
 import NotFound from './pages/NotFound.vue'
 import ShowProject from './pages/ShowProject.vue'
+import ContactUs from './pages/ContactUs.vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -22,6 +23,11 @@ const router = createRouter({
             path: '/projects/:id',
             name: 'show-project',
             component: ShowProject
+        },
+        {
+            path: '/contact-us',
+            name: 'contact-us',
+            component: ContactUs
         },
         {
             path: '/not-found',
